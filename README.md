@@ -15,6 +15,6 @@ us-east-1 region infrastructure provisioning with terraform using variables:
 
 [Data source with terraform](https://github.com/MederD/terraform_sprintqa/tree/main/terraform_data_source)  
 Create basic infrastructre with use of data sources.  
-    Public Ec2 with existing VPC and SG
+* Public Ec2 with existing VPC and SG
    
 
