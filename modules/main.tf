@@ -13,7 +13,7 @@ provider "aws" {
 
 # Module for non-default vpc
 module "myapp_vpc" {
-    source          = "./vpc"
+    source          = "./vpc" # Git repo can beused as a source
     sub_cidr_block  = var.sub_cidr_block
     az              = var.az
 	cidr_block_vpc  = var.cidr_block_vpc
@@ -23,6 +23,7 @@ module "myapp_vpc" {
 # Module for web-server
 module "myapp_web_server" {
     source          = "./web-server"
+    # source          = "github.com/MederD/terraform_sprintqa/tree/main/modules/web-server"
     my_ip           = var.my_ip
     key_name        = var.key_name
     user_name       = var.user_name
