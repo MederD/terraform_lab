@@ -1,29 +1,16 @@
-terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 3.0"
-    }
-  }
-}
-
-provider "aws" {
-  region  = var.region
-}
-
-# Public instance
+# --------------------Public instance
 resource "aws_instance" "my_pub_instance" {
   ami                         = var.ami_name[var.region]
   instance_type               = var.instance_type
   key_name                    = var.key_name
-  subnet_id                   = aws_subnet.my_pub_subnet-1.id
+  subnet_id                   = var.subnet_id
   associate_public_ip_address = true  
   vpc_security_group_ids      = [aws_security_group.my_pub_sg.id]
   count                       = 1
   
   tags          = {
     Name        = "${var.prefix}-pub-instance"
-    Created_by  = "${var.prefix}"
+    Created_by  = var.prefix
     Date        = timestamp()
   }
   
@@ -44,7 +31,3 @@ resource "aws_instance" "my_pub_instance" {
     ]
   }
 }  
-
-# mysql -h db_instance_name.cvebfuveorus.us-east-1.rds.amazonaws.com -P 3306 -u db_username -p
-
-

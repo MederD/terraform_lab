@@ -22,7 +22,7 @@ Create VPC and "web-server" instance template as a module:
 * Mapped AMI images for other regions.
 * Create 2 or more subnets with AZ.   
 
-[RDS DB in private subnet with public bastion host](https://github.com/MederD/terraform_sprintqa/tree/main/database_terraform)  
+[RDS DB in private subnet with public bastion host](https://github.com/MederD/terraform_sprintqa/tree/main/database_terraform)
 * Mapped AMI images for other regions.
 * Create 2 or more subnets with AZ (public and private)
 * RDS instance in private subnet 
