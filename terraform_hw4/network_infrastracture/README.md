@@ -1,14 +1,15 @@
 ## AWS VPC Terraform module  
 
-
-Provision Instructions:
+```
+**Provision Instructions:**
 
 Copy and paste into your Terraform configuration, insert the variables, and run terraform init :
-
+```
 module "vpc" {
   source  = "github.com/MederD/terraform_sprintqa/tree/main/terraform_hw4/network_infrastracture"
 }
-
+```
+```
 
 
 ### Terraform module which creates VPC resources on AWS.
