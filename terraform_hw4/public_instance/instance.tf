@@ -6,10 +6,10 @@ resource "aws_instance" "my_pub_instance" {
   subnet_id                   = var.subnet_id
   associate_public_ip_address = true  
   vpc_security_group_ids      = [aws_security_group.my_pub_sg.id]
-  count                       = var.count
+  count                       = var.instance_count
   
   tags          = {
-    Name        = "${var.prefix}-pub-instance"
+    Name        = "pub-instance-${count.index + 1}"
     Created_by  = var.prefix
     Date        = timestamp()
   }

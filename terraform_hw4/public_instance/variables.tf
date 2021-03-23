@@ -62,7 +62,7 @@ variable "ssh_key_path_pub" {
     description     = "Public key path"
 }
 
-variable "count" {
+variable "instance_count" {
     type            = number
     description     = "Count number for EC2 instances"
 }
