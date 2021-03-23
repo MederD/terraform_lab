@@ -1,5 +1,16 @@
 ## AWS VPC Terraform module  
 
+
+Provision Instructions:
+
+Copy and paste into your Terraform configuration, insert the variables, and run terraform init :
+
+module "vpc" {
+  source  = "github.com/MederD/terraform_sprintqa/tree/main/terraform_hw4/network_infrastracture"
+}
+
+
+
 ### Terraform module which creates VPC resources on AWS.
 
 **Created resources:**  
@@ -20,8 +31,5 @@ az_public
 az_private          
 ```
 
-### Provider Dependencies
 
-Providers are Terraform plugins that will be automatically installed during terraform init if available on the Terraform Registry.  
-* aws (hashicorp/aws) >= 2.70
 
