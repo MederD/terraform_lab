@@ -32,5 +32,12 @@ Create EC2 instance in public subnet and RDS instance in private subnet:
 * RDS instance in private subnet 
 * Public instance used as a bastion host
    
+-----
+[Using modules VPC, EC2 Instance and Database](https://github.com/MederD/terraform_sprintqa/tree/main/terraform_hw4)  
+Creates VPC, EC2 instance in public subnet and RDS instance in private subnet:
+* Mapped AMI images for other regions.
+* Create subnets with AZ (public and private)
+* RDS instance in private subnet
+
 
 
