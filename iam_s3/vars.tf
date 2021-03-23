@@ -1,0 +1,11 @@
+variable "region" {}
+variable "key_name" {}
+variable "vpc_id" {}
+variable "subnet_id" {}
+variable "security_group_id" {}
+variable "ssh_key_path" {}
+variable "ssh_key_path_pub" {}
+variable "bucket_name" {}
+variable "prefix" {}
+variable "instance_type" {}
+variable "user_name" {}

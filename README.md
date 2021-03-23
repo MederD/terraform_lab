@@ -39,5 +39,12 @@ Creates VPC, EC2 instance in public subnet and RDS instance in private subnet:
 * Create subnets with AZ (public and private)
 * RDS instance in private subnet
 
-
+-----
+[Using data source to create S3 bucket, IAM role, inline policy and EC2 instance](https://github.com/MederD/terraform_sprintqa/tree/main/iam_s3)  
+This project includes using data sources for creating S3 bucket, IAM role, inline policy and attach to EC2 instance: 
+* VPC, which is default 
+* Subnet, which is default
+* S3 bucket
+* IAM role, inline policy and instant_profile to attach to EC2 instance.
+* EC2 instance with attached role to access S3 bucket.
 
