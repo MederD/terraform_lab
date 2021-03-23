@@ -6,7 +6,7 @@ resource "aws_instance" "my_pub_instance" {
   subnet_id                   = var.subnet_id
   associate_public_ip_address = true  
   vpc_security_group_ids      = [aws_security_group.my_pub_sg.id]
-  count                       = 1
+  count                       = var.count
   
   tags          = {
     Name        = "${var.prefix}-pub-instance"

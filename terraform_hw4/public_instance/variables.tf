@@ -61,3 +61,8 @@ variable "ssh_key_path_pub" {
     type            = string
     description     = "Public key path"
 }
+
+variable "count" {
+    type            = number
+    description     = "Count number for EC2 instances"
+}
