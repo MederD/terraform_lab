@@ -67,8 +67,9 @@ resource "aws_subnet" "my_pub_subnets" {
   map_public_ip_on_launch = true
 
   tags           = {
-    Name         = "${var.prefix}-public-subnets-${count.index + 1}"
+    Name         = "public-subnet-${count.index + 1}"
     Created_by   = var.prefix
+    Tier         = "Public"
   }
 }
 
@@ -81,7 +82,7 @@ resource "aws_subnet" "my_private_subnets" {
   map_public_ip_on_launch = false
 
   tags           = {
-    Name         = "${var.prefix}-private-subnets-${count.index + 1}"
+    Name         = "private-subnet-${count.index + 1}"
     Created_by   = var.prefix
     Tier         = "Private"
   }

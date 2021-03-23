@@ -5,5 +5,5 @@ output "instance_public_ip" {
 
 output "db_instance_endpoint" {
   value       = module.myapp-db.rds_endpoint
-  description = "The public IP address of the public server instance."
+  description = "The endpoint of the database instance."
 }
