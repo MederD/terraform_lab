@@ -15,7 +15,7 @@ resource "docker_image" "nginx" {
 }
 
 resource "docker_volume" "shared_volume" {
-  name = "shared_volume"
+  name = "volume_name"
 }
 
 resource "docker_container" "nginx" {
@@ -28,7 +28,8 @@ resource "docker_container" "nginx" {
   }
 
   volumes {
-    volume_name = docker_volume.shared_volume.name
+    volume_name = docker_volume.shared_volume.id
+    container_path = "/var"	
   }
 }
 
